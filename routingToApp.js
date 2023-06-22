@@ -1,11 +1,7 @@
 // підключаю модуль routing.js маршрутизації у додаток:
-
 const express = require('express');
-
 const myRouter = require('./routing');
-
 const app = express();
-
 app.use('/contact', myRouter);
 // Цей додаток тепер зможе обробляти запити, адресовані ресурсам /contact та /contact/about.
 

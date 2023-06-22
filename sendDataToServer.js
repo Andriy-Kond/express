@@ -1,4 +1,19 @@
 //* Передача даних на сервер
+//& У req.body - значення з форми чи JSON
+// обробка парсером для форми: app.use(express.urlencoded({ extended: false }));
+// обробка парсером для JSON: app.use(express.json());
+// далі приймання сервером черезЖ app.post('/login', (req, res, next) => {  const { email, password } = req.body; });
+//& У req.params - значення динамічного значення адресного рядку (після "/:")
+// app.patch('/user/:userID', (req, res) => {  const id = req.params.userID; }); // req.params.userID === 123
+//& У req.query - значення параметрів з адресного рядку після "?"
+// http://localhost:3000/contacts?skip=0&limit=10
+// req.query === { skip: 0, limit: 10 }
+//& У req.headers - значення заголовків?
+
+// morgan - пакет npm для логування HTTP-запитів
+// dotenv - пакет npm для роботи зі змінними оточення process.env
+// mongoose - пакет npm для роботи з БД MongoDB. Більш зручний, ніж пакет mongodb від MongoDB.
+
 // Є 5 способів: через передачу параметру у URL(contact/:id), через адресний рядок після знаку ?, за допомогою форм, через JSON (XML - старий), через токен.
 //~ Через URL(contact/:id)
 // .../contact/123

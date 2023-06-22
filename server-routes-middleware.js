@@ -14,7 +14,6 @@ app.get('/', (req, res) => res.send('Hello world!')); // На http://localhost:3
 app.get('/contact', (req, res) => {
   res.send('<h1>Contact page</h1>'); // На http://localhost:3000/contact буде заголовок "Contact page"
 });
-
 //* /routes
 
 const PORT = 3000;
